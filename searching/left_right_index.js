@@ -13,39 +13,31 @@
  * @returns {number[]}
 */
 
-function BinarySearch(start, end, array, num) {
-    if (start > end) {
-        return -1;
-    }
-    let middle = start + (end - start) / 2;
-    if (array[middle] === num) {
-        //position found
-        return middle;
-    }
-    else if (array[middle] > num) {
-        return BinarySearch(start, (middle - 1), array, num);
-    }
-    else if (array[middle] < num) {
-        return BinarySearch((middle + 1), end, array, num);
-    }
+let BinarySearch = function (arr, x, start, end) {
+    if (start > end) return -1;
+    let mid = Math.floor((start + end) / 2);
+    if (arr[mid] === x) return mid;
+    if (arr[mid] > x) return BinarySearch(arr, x, start, mid - 1);
+    else return BinarySearch(arr, x, mid + 1, end);
 }
 
 class Solution {
     indexes(v, x) {
         // code here
         let arrayLength = v.length;
-        let location = BinarySearch(0, arrayLength - 1, v, x);
+        let location = BinarySearch(v, x, 0, arrayLength - 1);
+        // console.log(location);
         if (location === -1) {
-            reutrn[-1, -1];
+            return [-1, -1];
         }
         let left = location;
         let right = location;
-        while (v[left] === x) {
+        while (left >= 1 && v[left - 1] === x) {
             left--;
         }
-        while (v[right] === x) {
+        while (right <= arrayLength && v[right + 1] === x) {
             right++
         }
-        return [left + 1, right - 1];
+        return [left, right];
     }
 }
