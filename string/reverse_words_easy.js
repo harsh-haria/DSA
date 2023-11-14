@@ -21,18 +21,27 @@ class Solution {
         if (!s.length) {
             return null;
         }
-        let anchorString;
+        let anchorString = ``;
         let char;
         for (char = 0; char < s.length; char++) {
             if (s[char] === '.') break;
             anchorString += s[char];
         }
-        if (char) {
+        if (char < s.length) {
             char++;
         }
         let newString = '';
         for (; char < s.length; char++) {
             newString += s[char];
         }
+        let returnString = this.reverseWords(newString);
+        if (returnString) {
+            return (returnString + '.' + anchorString);
+        }
+        return anchorString;
     }
 }
+
+let solution = new Solution();
+let solutionEx = solution.reverseWords('harsh.haria');
+console.log(solutionEx);
