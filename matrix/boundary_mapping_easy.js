@@ -1,4 +1,8 @@
 /**
+ * @description You are given a matrix of dimensions n x m. The task is to perform boundary traversal on the matrix in a clockwise manner.
+ * 
+ * @link https://practice.geeksforgeeks.org/problems/boundary-traversal-of-matrix-1587115620/1
+ * 
  * @param {number[][]} matrix
  * @param {number} n
  * @param {number} m
@@ -41,10 +45,10 @@ class Solution {
 
 const solution = new Solution();
 let matrix = [
-    [1,2,3,4],
-    [5,6,7,8],
-    [9,10,11,12],
-    [13,14,15,16]
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
 ]
 
 let boundary = solution.boundaryTraversal(matrix, 4, 4);
