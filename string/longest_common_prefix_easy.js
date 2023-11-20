@@ -1,4 +1,8 @@
 /**
+ * @description Given a non-empty array nums[] of integers of length N, find the top k elements which have the highest frequency in the array. If two numbers have same frequencies, then the larger number should be given more preference.
+ * 
+ * @link https://practice.geeksforgeeks.org/problems/longest-common-prefix-in-an-array5129/1
+ * 
  * @param {string[]} arr
  * @param {number} n
  * @returns {string}
