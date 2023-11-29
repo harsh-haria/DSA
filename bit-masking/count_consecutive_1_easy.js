@@ -1,4 +1,6 @@
 /**
+ * @link https://practice.geeksforgeeks.org/problems/longest-consecutive-1s-1587115620/1
+ * 
  * @param {Number} N
  * @returns {Number}
 */
