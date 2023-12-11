@@ -69,3 +69,7 @@ class Solution {
         return stack.print();
     }
 }
+
+const solution = new Solution();
+let ansString = solution.Reduced_String(2, 'geeksforgeeks');
+console.log(ansString);
