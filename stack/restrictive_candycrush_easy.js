@@ -1,3 +1,12 @@
+/**
+ * @description 
+ * 
+ * @link https://practice.geeksforgeeks.org/problems/8c8f95810b05b4cab665f2997d36991bd58308a2/1/
+ * 
+ * @param {Number} k
+ * @param {String} s
+ */
+
 class Stack {
     constructor() {
         this.items = [];
