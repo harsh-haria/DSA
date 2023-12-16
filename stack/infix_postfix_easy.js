@@ -82,3 +82,8 @@ class Solution {
         return ans;
     }
 }
+
+const solution = new Solution();
+let infix = `a*b-c+(d/e^h)`;
+let postfix = solution.infixToPostfix(infix);
+console.log(postfix);
