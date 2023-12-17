@@ -48,3 +48,8 @@ class Solution {
         return answerArray;
     }
 }
+
+let solution = new Solution();
+let inputArray = [1, -2, 3, 5, 0, -3, -2];
+let arrayOutput = solution.rearrange(inputArray);
+console.log(arrayOutput);
